@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Quak's Site</title>
 <link rel="icon" type="image/ico" href="assets/images/quakducc.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js" integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ==" crossorigin="anonymous" defer></script>
 <style>
 @font-face {
 	font-family: "Rockwell";
-	src: local("Rockwell"), url("assets/fonts/ROCK.TTF");
+	src: local("Rockwell"), url("assets/fonts/Rockwell.woff2") format("woff2");
+}
+@font-face {
+	font-family: "MS UI Gothic";
+	src: local("MS UI Gothic"), url("MS-UIGothic.woff2") format("woff2");
+}
+html {
+	min-height: 100%;
+}
+body {
+	margin: 0;
+	background-image: linear-gradient(#f0c776, #dae48e);
 }
 header {
 	position: relative;
@@ -30,6 +42,16 @@ header h1 {
 header h1 span {
 	color: #f89208;
 }
+main {
+	margin-top: 40px;
+	margin-left: 40px;
+	font-family: "MS UI Gothic";
+}
+canvas {
+	display: block;
+	margin: auto;
+	background-color: #4c4c4c;
+}
 </style>
 </head>
 <body>
@@ -38,8 +60,8 @@ header h1 span {
 		<h1>Quak<span>Ducc</span></h1>
 	</header>
 	<main>
-	<h2>What have I been up to?</h2>
-	<p>nothing!!</p>
+		<canvas id="glcanvas" width="768" height="576"></canvas>
 	</main>
+<script type="text/javascript" src="index.js" defer></script>
 </body>
 </html>
