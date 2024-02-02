@@ -1,3 +1,4 @@
 
 *.xml
 .idea/CodingQuak.github.io.iml
+.vscode/settings.json
